@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ee1c57-d24a-49e6-b572-3e2c32443727" name="Changes" comment="martina">
+    <list default="true" id="c5ee1c57-d24a-49e6-b572-3e2c32443727" name="Changes" comment="gi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
     </list>
@@ -85,7 +85,7 @@
       <workItem from="1668598789066" duration="441000" />
       <workItem from="1668599233696" duration="185000" />
       <workItem from="1668599421239" duration="524000" />
-      <workItem from="1671119143307" duration="47207000" />
+      <workItem from="1671119143307" duration="33527000" />
     </task>
     <task id="LOCAL-00001" summary="martina">
       <created>1668187699651</created>
@@ -171,12 +171,12 @@
       <option name="project" value="LOCAL" />
       <updated>1672247189226</updated>
     </task>
-    <task id="LOCAL-00013" summary="martina">
-      <created>1672254695037</created>
+    <task id="LOCAL-00013" summary="gi">
+      <created>1672670788851</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1672254695037</updated>
+      <updated>1672670788851</updated>
     </task>
     <option name="localTasksCounter" value="14" />
     <servers />
@@ -211,6 +211,7 @@
     <MESSAGE value="squash! martina" />
     <MESSAGE value="Revert &quot;fra&quot;&#10;&#10;This reverts commit 5cc7fa5f" />
     <MESSAGE value="martina" />
-    <option name="LAST_COMMIT_MESSAGE" value="martina" />
+    <MESSAGE value="gi" />
+    <option name="LAST_COMMIT_MESSAGE" value="gi" />
   </component>
 </project>
