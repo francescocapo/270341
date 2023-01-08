@@ -1,6 +1,10 @@
-# 270341
+# Machine Learning project: CUSTOMER SEGMENTATION 
+## By Martina Serandrei, Giulia Macis, Francesco Capo
 
+### Introduction
 
+The aim of this project is to analyse the data provided by a very big company about its Brazilian to be able to build an email campaign based on a customers' clustering.
+The analysis we carried out started with the visualization of the data and some data exploration regarding general features such as
 - Recency. 
   - How recent was the customer's last purchase? Customers who recently made a purchase will still have the product on their mind and are more likely to purchase or use the product again. Businesses often measure recency in days. But, depending on the product, they may measure it in years, weeks or even hours.
 - Frequency.
