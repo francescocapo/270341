@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5ee1c57-d24a-49e6-b572-3e2c32443727" name="Changes" comment="fra">
-      <change afterPath="$PROJECT_DIR$/images/BIrch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Gmm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/barplot_payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/calinski harabasz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/dendogram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/elbowmethod.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hierarchical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/kmeans2d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/kmeans3d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/silhouette.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +36,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$USER_HOME$/Desktop/MaCS/SNA project" />
@@ -385,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673198472124</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fra">
+      <created>1673200470615</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1673200470615</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
