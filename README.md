@@ -68,7 +68,7 @@ It is easily understandable from the description that the number of items that w
 
 Furthermore, we decided to plot some of the features which might be interesting to correlate. One of these could be the number of orders derived from each Brazilian federate state with a bar plot; so, we counted (with `.size()`) how many order per state by applying the pandas `.groupby()` function.
 
-![customer_state_count](images/customer_state_count.png) 
+![customer_state_count](https://github.com/francescocapo/270341/blob/main/images/customer_state_count.png) 
 
 What we can notice is a large majority of orders coming from São Paulo state, which is the most important state by population and this could be a reason for it.
 
@@ -98,7 +98,7 @@ At this point having all the data we needed, we started implementing the cluster
 The first method we implemented was the Kmeans algorithm, for which we needed to compute the elbow method in order to find the right cluster number. As result, we found two numbers, 4 and 5.
 The best way to  decide which one to use was to compare their plots and their scores. Finally, we decided that the best one is the one with 4 clusters since the graph is clearer and the scores are optimized in a better way.
 
-![elbowmethod.png](images%2Felbowmethod.png)
+![elbowmethod.png](https://github.com/francescocapo/270341/blob/main/images/elbowmethod.png)
 
 For the Hierarchical Clustering we computed the number of cluster with the help of the dendrogram. After plotting it, we could see that also in this case the right choice for clusters was 4.
 
