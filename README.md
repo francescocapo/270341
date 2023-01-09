@@ -9,7 +9,7 @@ In order to accomplish our mission, we followed these steps:
 - RFM analysis
 - Implemented four clustering algorithms
 
-Only after a deep analysis of their performance and outcomes we presented the clusters.
+Only after a deep analysis of their performance and outcomes we presente the clusters.
 
 ## Methods
 In order to complete in the best way our analysis we chose to use four different algorithms, Kmeans Clustering, Hierarchical clustering, Gaussian Mixture Model and Birch model.
