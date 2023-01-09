@@ -47,8 +47,8 @@ Is worth to note that in order to compute and plot our clusters we needed to imp
   - from sklearn.metrics import silhouette_score, calinski_harabasz_score, davies_bouldin_score | it computes the metrics results.
   - from IPython.display import display | we used it to display the dataframes in a tidy format.
 
-### Experimental design
-#### EDA:
+## Experimental design
+
 In order to deeply understand the dataset before actually working on it, we performed an analysis starting from the visualization of the data and some data exploration.
 For example, we firstly printed the shape of the dataset, and then we used the `describe()` function to compute some useful descriptive statistics which summarize the central tendency, dispersion, and shape of a dataset’s distribution.
     
@@ -106,7 +106,7 @@ For the Hierarchical Clustering we computed the number of cluster with the help 
 
 Finally, in the GMM and the Birch, for the sake of consistency, we passed as hyperparameters 4 clusters to be able to compare it with the previous methods. 
 
-## Results 
+## Results / Conclusion
 After implementing all the clustering methods, we carried out an overall analysis of the outcomes obtained, and of the performance of the algorithms.
 
 We visualized the clusters through 3D scatter plots, but we also computed empirical results about the characteristics of the clusters obtained.
@@ -164,7 +164,7 @@ Looking at the plot though we saw that the clusters aren’t homogeneous since t
 Over all we deduce that the best algorithm is k means and the worst is gaussian mixture model, as we already deduced by the visual representations of the clusters.
 The reason why it isn’t a good method for our dataset is probably because we have a big dataset with well-defined data, and low noise, so the kmeans method works better even if it's simpler.
 Moreover, The GMM method is less sensitive to outliers.
-### Conclusion
+
 After the detailed analysis we concluded that the best model is the k means algorithm, therefore the segments obtained are the following four:
 -inactive customers
 -active customers
