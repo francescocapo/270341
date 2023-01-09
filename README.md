@@ -69,46 +69,53 @@ It is easily understandable from the description that the number of items that w
 Furthermore, we decided to plot some of the features which might be interesting to correlate. One of these could be the number of orders derived from each Brazilian federative state with a barplot; so, we counted (with `.size()`) how many order per state by applying the pandas `.groupby()` function.
 
 ![customer_state_count.png](images%2Fcustomer_state_count.png) 
-What we can notice is a large majority of orders coming from São Paulo state, which is the most important state by population and this could be a reason for it.
-Another intriguing relationship to investigate was the how many orders are paid using a certain payment type per state. And as we can see from the graph the most used payment type in general is the credit card and then boleto is the second most used method to pay. ![barplot_payment.png](images%2Fbarplot_payment.png)
-The last aspect we wanted to look into was the number of order made in each month. The result revealed that from April to August the subsidiary got a lot of orders with a peak in May, whereas in the rest of the months they were very few; in September, October and November there were no orders at all. This information helped us a lot during the analysis because(?)
 
-A fundamental step for the initial analysis was studying and visualizing the ouliers to understand if they needed to be removed from the dataset or they could bring a relevant importance to the customers' segmentation. We decided to handle the question by using a pairplot, thanks to which we could detect them in _payment_value_ most of all, but seeingt them, made us realize that if even they could have unusual characteristics, they remained customers to be considered because maybe they could have been included in the email campaign.
-Finally, before diving deeply into the data manipulation, we performed an encoding for categorical variable into quantitative variables, so that they could be taken into consideration in the analysis. We smply used the pandas function `.get_dummies()`.
+What we can notice is a large majority of orders coming from São Paulo state, which is the most important state by population and this could be a reason for it.
+
+Another intriguing relationship to investigate was how many orders are paid using a certain payment type per state. And as we can see from the graph, the most used payment type in general is the credit card and then boleto is the second most used method to pay. ![barplot_payment.png](images%2Fbarplot_payment.png)
+The last aspect we wanted to look into was the number of order made in each month. The result revealed that from April to August the subsidiary got a lot of orders with a peak in May, whereas in the rest of the months they were very few.
+
+A fundamental step for the initial analysis was studying and visualizing the ouliers to understand if they needed to be removed from the dataset or they could bring relevant information to the customers' segmentation. We decided to handle the issue by using a pairplot, thanks to which we could detect them; in particular the majority belong to _payment_value_ , but visualizing them, made us realize that even if some values are unusual, they still need to be considered because maybe they are customers that could have been included in the email campaign.
+Finally, before diving deeply into the data manipulation, we performed an encoding for categorical variable into quantitative variables, so that they could be taken into consideration in the analysis. We simply used the pandas function `.get_dummies()`.
 
 As we said before our segmentation follows the RFM analysis:
 It is a behavior-based technique used to segment customers by examining their transaction history focusing on the following:
-o	Recency: how recently a customer has purchased.
-It is expressed in days,  meaning that high recency corresponds to orders made a long time ago. 
-o	Frequency: how often they purchase 
-o	Monetary value: how much the customer spends 
-It is the most suitable technique since it helps to identify customers who are more likely to respond to promotions, which is the ultimate goal of the target email campaign.
-For example, Customers who recently made a purchase will still have the product on their minds, so they are more likely to buy again especially if they are pulled by the marketing campaign.
+
+- Recency: how recently a customer has purchased.
+  It is expressed in days,  meaning that high recency corresponds to orders made a long time ago. 
+
+- Frequency: how often they purchase
+
+- Monetary value: how much the customer spends.
+
+It is the most suitable technique since it helps to identify customers who are more likely to respond to promotions, which is the ultimate goal of the targeted email campaign.
+For example, customers who recently made a purchase will still have the product on their minds, so they are more likely to buy again especially if they are pulled by the marketing campaign.
 Additionally, first-time customers, with a low frequency may be good targets for the marketing campaign to convert them into more frequent customers.
-To carry out the techniques we first computed all the metrics and then we stored them in a dataframe called score_dataframe.
-Since the scales of the 3 variables are substantially different We considered it necessary to standardize the results in order to work with uniform values.
-At this point having all the data we needed we started implementing the clustering methods.
+To carry out the techniques we first computed all the metrics, and then we stored them in a dataframe called *score_dataframe*.
+Since the scales of the 3 variables are substantially different, we thought it would be necessary to standardize the results in order to work with uniform values.
+At this point having all the data we needed, we started implementing the clustering methods.
 
-![elbowmethod.png](images%2Felbowmethod.png)
 
-### Results 
-After implementing all the clustering methods we carried out an overall analysis of the outcomes obtained and of the performance of the algorithms.
 
-We visualized the clusters through 3D scatter plots but we also computed empirical results about the characteristics of the clusters obtained.
+## Results 
+After implementing all the clustering methods, we carried out an overall analysis of the outcomes obtained, and of the performance of the algorithms.
+
+We visualized the clusters through 3D scatter plots, but we also computed empirical results about the characteristics of the clusters obtained.
 Comparing both we can describe the clusters:
-For example we notice that the ones obtained with kmeans, hierarchical and birch algorithm  are quite similar to each other (despite the order of their lebels)
-For example the clusters obtained in the birch model and k means model are very similar to each others. 
-The first one represents inactive customers that have made a few purchases typically a long time ago.
-The second one represents active customers that have made purchases many times, also recently, and have spent a fair amount on their purchases.
-The third cluster represents new customers that have purchased very recently (they have in fact the lowest recency value) and have not spent much, because they haven’t made frequent transactions yet.
-Finally, the fourth cluster represents usual/ loyal customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value). 
-The hierarchical clusters are pretty similar to the kmeans and birch clusters as well, The slight differences are that:
-In the hierarchical clusters the inactive customers have a lower recency and a lower frequency, 
-the active/usual customers  have a lower monetary value and higher recency and 
+for example the clusters obtained in the birch model and kmeans model are very similar to each others (despite the order of their labels).
+- **The first cluster** represents inactive customers that have made a few purchases typically a long time ago.
+- **The second one** represents active customers that have made purchases many times, also recently, and have spent a fair amount on their purchases.
+- **The third cluster** represents new customers that have purchased very recently (they have in fact the lowest recency value) and have not spent much, because they haven’t made frequent transactions yet.
+- Finally, **the fourth cluster** represents usual/ loyal customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value). 
+
+The hierarchical clusters are pretty similar to the kmeans and birch clusters as well, the slight differences are that:
+in the hierarchical clusters the inactive customers have a lower recency and a lower frequency, 
+the active customers  have a lower monetary value and higher recency and 
 the new customers have a higher recency and lower frequency.
 
 The Gaussian method instead returns different clusters,
-As a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and two , meaning that there is no distinction between Active/ medium- spender customers and loyal/high-spender customers. Additionally Three really similar clusters are created, all three contains customers with a high recency, low frequency low monetary value making them not useful for our ultimate goal.
+as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and loyal customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency 
+and low monetary value making them not useful for our ultimate goal.
 
 The inappropriateness of this method can be proven by the scores that quantify the performance of the algorithms.
 
@@ -124,10 +131,11 @@ We decided to calculate 3 of these scores:
    ![calinski harabasz.png](images%2Fcalinski%20harabasz.png)
 3. Davies-Bouldin score.
 
-    The measure is the average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances.This means that, clusters which are farther apart and less dispersed will result in a better score.
-The meaning value is zero, so the lower the score the better the clusters.
-From the scores it emerges that the best algorithm is k means and the worst is gaussian mixture model, as we already deduced by the visual representations of the clusters.
+    The score is the average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances.This means that, clusters which are farther apart and less dispersed will result in a better score.
+The minimum value is zero, so the lower the score the better the clusters.
       ![davis bouldin.png](images%2Fdavis%20bouldin.png)
+From the scores it emerges that the best algorithm is kmeans, since it has the highest Silhouette, and Calinski and Harabasz score and the lowest Davies-Bouldin score.
+Whereas the worst algorithm is clearly gaussian mixture model, and it is proven by the fact that it has the lowest Silhouette, and Calinski and Harabasz score and the highest Davies-Bouldin score as we already deduced by the visual representations of the clusters.
 
 ### Conclusion
 After the detailed analysis we concluded that the best model is the k means algorithm, therefore the segments obtained are the following four:
