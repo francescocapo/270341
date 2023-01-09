@@ -64,15 +64,15 @@ Then we started analyzing the variables of the dataset by plotting the correlati
 In our case we saw that basically our numeric variables are the ones related to the payments or the orders; in particular, we can see that there is a high correlation between _payment_value_ and the _price_, while we have  a negative correlation, with _order_item_id_ and the _price_ since _order_item_id_ stands for the number of items for each order, and the _price_ means the price of each item. 
 It is easily understandable from the description that the number of items that we place in an order cannot influence in any way the price of an item. We can make the same reasoning for the relationship between _order_item_id_ and _freight_value_.
 
-![heatmap.png](images%2Fheatmap.png)
+![heatmap](images/heatmap.png)
 
 Furthermore, we decided to plot some of the features which might be interesting to correlate. One of these could be the number of orders derived from each Brazilian federative state with a barplot; so, we counted (with `.size()`) how many order per state by applying the pandas `.groupby()` function.
 
-![customer_state_count.png](images%2Fcustomer_state_count.png) 
+![customer_state_count](images/customer_state_count.png) 
 
 What we can notice is a large majority of orders coming from São Paulo state, which is the most important state by population and this could be a reason for it.
 
-Another intriguing relationship to investigate was how many orders are paid using a certain payment type per state. And as we can see from the graph, the most used payment type in general is the credit card and then boleto is the second most used method to pay. ![barplot_payment.png](images%2Fbarplot_payment.png)
+Another intriguing relationship to investigate was how many orders are paid using a certain payment type per state. And as we can see from the graph, the most used payment type in general is the credit card and then boleto is the second most used method to pay. ![barplot_payment](images/barplot_payment.png)
 The last aspect we wanted to look into was the number of order made in each month. The result revealed that from April to August the subsidiary got a lot of orders with a peak in May, whereas in the rest of the months they were very few.
 
 A fundamental step for the initial analysis was studying and visualizing the ouliers to understand if they needed to be removed from the dataset or they could bring relevant information to the customers' segmentation. We decided to handle the issue by using a pairplot, thanks to which we could detect them; in particular the majority belong to _payment_value_ , but visualizing them, made us realize that even if some values are unusual, they still need to be considered because maybe they are customers that could have been included in the email campaign.
@@ -123,17 +123,17 @@ We decided to calculate 3 of these scores:
 1. The silhouette score: 
 
     It measures how similar a value is to its own cluster (cohesion) compared to other clusters (separation). The score ranges from −1 to +1, where a high value indicates that the datapoint is well matched to its own cluster and a low value indicates poorly matched to its cluster.
-![silhouette.png](images%2Fsilhouette.png)
+![silhouette](images/silhouette.png)
 2. Calinski and Harabasz score:
 
    It measures the sum of between-cluster dispersion and of within-cluster dispersion.
    The higher the value the better the clusters.
-   ![calinski harabasz.png](images%2Fcalinski%20harabasz.png)
+   ![calinski harabasz](images/calinski harabasz.png)
 3. Davies-Bouldin score.
 
     The score is the average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances.This means that, clusters which are farther apart and less dispersed will result in a better score.
 The minimum value is zero, so the lower the score the better the clusters.
-      ![davis bouldin.png](images%2Fdavis%20bouldin.png)
+      ![davis bouldin](images/davis bouldin.png)
 From the scores it emerges that the best algorithm is kmeans, since it has the highest Silhouette, and Calinski and Harabasz score and the lowest Davies-Bouldin score.
 Whereas the worst algorithm is clearly gaussian mixture model, and it is proven by the fact that it has the lowest Silhouette, and Calinski and Harabasz score and the highest Davies-Bouldin score as we already deduced by the visual representations of the clusters.
 
