@@ -111,29 +111,36 @@ After implementing all the clustering methods, we carried out an overall analysi
 
 We visualized the clusters through 3D scatter plots, but we also computed empirical results about the characteristics of the clusters obtained.
 Comparing both we can describe the clusters:
-for example the clusters obtained in the **birch model** and **kmeans model** are very similar to each others (despite the order of their labels).
-
 ![kmeans3d.png](https://github.com/francescocapo/270341/blob/main/images/kmeans3d.png)
 
-![BIrch.png](https://github.com/francescocapo/270341/blob/main/images/BIrch.png)
 
 - **The first cluster** represents inactive customers that have made a few purchases typically a long time ago.
 - **The second one** represents active customers that have made purchases many times, also recently, and have spent a fair amount on their purchases.
 - **The third cluster** represents new customers that have purchased very recently (they have in fact the lowest recency value) and have not spent much, because they haven’t made frequent transactions yet.
 - Finally, **the fourth cluster** represents usual/ loyal customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value). 
 
-The **hierarchical** clusters are pretty similar to the kmeans and birch clusters as well, the slight differences are that:
+The **hierarchical** clusters are pretty similar to the kmeans, the slight differences are that:
 in the hierarchical clusters the inactive customers have a lower recency and a lower frequency,
 the active customers  have a lower monetary value and higher recency and
 the new customers have a higher recency and lower frequency.
 
 ![hierarchical.png](https://github.com/francescocapo/270341/blob/main/images/hierarchical.png)
 
+The **birch** clusters are not homogeneous.
+The first cluster contains customers with low recency, high frequency and medium monetary values.
+The second one contains only a few customers with medium recency, high frequency and high monetary value.
+The third one is really consistent and represents a large variety of customers, many with both low and high recency, a relatively low frequency and a low monetary value.
+The fourth cluster contains only one customer, which could be assigned to the second one.
+The segmentation is clearly not functional according to our ultimate goal since it doesn't picture the various customer groups.
+
+![BIrch.png](https://github.com/francescocapo/270341/blob/main/images/BIrch.png)
+
 The **Gaussian method** instead returns different clusters,
 as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and loyal customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
 and low monetary value making them not useful for our ultimate goal.
 
 ![Gmm.png](https://github.com/francescocapo/270341/blob/main/images/Gmm.png)
+
 The inappropriateness of this method can be proven by the scores that quantify the performance of the algorithms.
 
 We decided to calculate 3 of these scores:
