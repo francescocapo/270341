@@ -133,10 +133,10 @@ The third one is really consistent and represents a large variety of customers, 
 The fourth cluster contains only one customer, which could be assigned to the second one.
 The segmentation is clearly not functional according to our ultimate goal since it doesn't picture the various customer groups.
 
-![BIrch.png](https://github.com/francescocapo/270341/blob/main/images/BIrch.png)
+![Birch.png](https://github.com/francescocapo/270341/blob/main/images/birch.png)
 
 The **Gaussian method** instead returns different clusters,
-as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and regular-high spender customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
+as a matter of fact cluster 3 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and regular-high spender customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
 and low monetary value making them not useful for our ultimate goal.
 
 ![Gmm.png](https://github.com/francescocapo/270341/blob/main/images/Gmm.png)
