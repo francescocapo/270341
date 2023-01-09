@@ -66,7 +66,9 @@ It is easily understandable from the description that the number of items that w
 
 ![heatmap.png](images%2Fheatmap.png)
 
-Furthermore, we decided to plot some of the features which might be interesting to correlate. One of these could be the number of orders derived from each Brazilian federative state with a barplot; so, we counted (with `.size()`) how many order per state by applying the pandas `.groupby()` function. ![customer_state_count.png](images%2Fcustomer_state_count.png) What we can notice is a large majority of orders coming from São Paulo state, which is the most important state by population and this could be a reason for it.
+Furthermore, we decided to plot some of the features which might be interesting to correlate. One of these could be the number of orders derived from each Brazilian federative state with a barplot; so, we counted (with `.size()`) how many order per state by applying the pandas `.groupby()` function. 
+![customer_state_count.png](images%2Fcustomer_state_count.png) 
+What we can notice is a large majority of orders coming from São Paulo state, which is the most important state by population and this could be a reason for it.
 Another intriguing relationship to investigate was the how many orders are paid using a certain payment type per state. And as we can see from the graph the most used payment type in general is the credit card and then boleto is the second most used method to pay. ![barplot_payment.png](images%2Fbarplot_payment.png)
 The last aspect we wanted to look into was the number of order made in each month. The result revealed that from April to August the subsidiary got a lot of orders with a peak in May, whereas in the rest of the months they were very few; in September, October and November there were no orders at all. This information helped us a lot during the analysis because(?)
 
