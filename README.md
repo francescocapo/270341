@@ -1,4 +1,4 @@
-# Machine Learning project: CUSTOMER SEGMENTATION 
+# Artificial Intelligence project: CUSTOMER SEGMENTATION 
 ### By Martina Serandrei, Giulia Macis, Francesco Capo
 
 ## Introduction
@@ -152,21 +152,21 @@ We decided to calculate 3 of these scores:
 
    It measures the sum of between-cluster dispersion and of within-cluster dispersion.
    The higher the value the better the clusters.
-   ![calinski harabasz](images/https://github.com/francescocapo/270341/blob/main/images/calinski%20harabasz.png)
+   ![calinski harabasz](https://github.com/francescocapo/270341/blob/main/images/calinski%20harabasz.png)
 3. Davies-Bouldin score.
 
     The score is the average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances.This means that, clusters which are farther apart and less dispersed will result in a better score.
 The minimum value is zero, so the lower the score the better the clusters.
-      ![davis bouldin](images/https://github.com/francescocapo/270341/blob/main/images/davis%20bouldin.png)
+      ![davis bouldin](https://github.com/francescocapo/270341/blob/main/images/davis%20bouldin.png)
 
 The results can be a little misleading, for example the birch algorithm has the highest Silhouette score and the lowest Davies-Bouldin score but it has a low Calinski and Harabasz score.
 Looking at the plot though we saw that the clusters aren’t homogeneous since the last one contains only one customer implying that this method isn’t the best choice.
-Over all we deduce that the best algorithm is k means and the worst is gaussian mixture model, as we already deduced by the visual representations of the clusters.
+Over all, we deduce that the best algorithm is k means and the worst is gaussian mixture model, as we already deduced by the visual representations of the clusters.
 The reason why it isn’t a good method for our dataset is probably because we have a big dataset with well-defined data, and low noise, so the kmeans method works better even if it's simpler.
 Moreover, The GMM method is less sensitive to outliers.
 
 After the detailed analysis we concluded that the best model is the k means algorithm, therefore the segments obtained are the following four:
--inactive customers
--active customers
--new customers
--regular-high spender customers
+- inactive customers
+- active customers
+- new customers
+- regular-high spender customers
