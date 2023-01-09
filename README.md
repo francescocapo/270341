@@ -102,7 +102,7 @@ The best way to  decide which one to use was to compare their plots and their sc
 
 For the Hierarchical Clustering we computed the number of cluster with the help of the dendrogram. After plotting it, we could see that also in this case the right choice for clusters was 4.
 
-![dendogram.png](images%2Fdendogram.png)
+![dendogram.png](https://github.com/francescocapo/270341/blob/main/images/dendrogram.png)
 
 Finally, for the GMM and the Birch we put 4 clusters for the sake of consistency and to be able to compare it with the previous methods. 
 
@@ -113,9 +113,9 @@ We visualized the clusters through 3D scatter plots, but we also computed empiri
 Comparing both we can describe the clusters:
 for example the clusters obtained in the **birch model** and **kmeans model** are very similar to each others (despite the order of their labels).
 
-![kmeans3d.png](images%2Fkmeans3d.png)
+![kmeans3d.png](https://github.com/francescocapo/270341/blob/main/images/kmeans3d.png)
 
-![BIrch.png](images%2FBIrch.png)
+![BIrch.png](https://github.com/francescocapo/270341/blob/main/images/BIrch.png)
 
 - **The first cluster** represents inactive customers that have made a few purchases typically a long time ago.
 - **The second one** represents active customers that have made purchases many times, also recently, and have spent a fair amount on their purchases.
@@ -127,30 +127,30 @@ in the hierarchical clusters the inactive customers have a lower recency and a l
 the active customers  have a lower monetary value and higher recency and
 the new customers have a higher recency and lower frequency.
 
-![hierarchical.png](images%2Fhierarchical.png)
+![hierarchical.png](https://github.com/francescocapo/270341/blob/main/images/hierarchical.png)
 
 The **Gaussian method** instead returns different clusters,
 as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and loyal customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
 and low monetary value making them not useful for our ultimate goal.
 
-![Gmm.png](images%2FGmm.png)
+![Gmm.png](https://github.com/francescocapo/270341/blob/main/images/Gmm.png)
 The inappropriateness of this method can be proven by the scores that quantify the performance of the algorithms.
 
 We decided to calculate 3 of these scores:
 1. The silhouette score: 
 
     It measures how similar a value is to its own cluster (cohesion) compared to other clusters (separation). The score ranges from −1 to +1, where a high value indicates that the datapoint is well-matched to its own cluster and a low value indicates poorly matched to its cluster.
-![silhouette](images/silhouette.png)
+![silhouette](https://github.com/francescocapo/270341/blob/main/images/silhouette.png)
 2. Calinski and Harabasz score:
 
    It measures the sum of between-cluster dispersion and of within-cluster dispersion.
    The higher the value the better the clusters.
-   ![calinski harabasz](images/calinski harabasz.png)
+   ![calinski harabasz](images/https://github.com/francescocapo/270341/blob/main/images/calinski%20harabasz.png)
 3. Davies-Bouldin score.
 
     The score is the average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances.This means that, clusters which are farther apart and less dispersed will result in a better score.
 The minimum value is zero, so the lower the score the better the clusters.
-      ![davis bouldin](images/davis bouldin.png)
+      ![davis bouldin](images/https://github.com/francescocapo/270341/blob/main/images/davis%20bouldin.png)
 From the scores it emerges that the best algorithm is kmeans, since it has the highest Silhouette, and Calinski and Harabasz score and the lowest Davies-Bouldin score.
 Whereas the worst algorithm is clearly gaussian mixture model, and it is proven by the fact that it has the lowest Silhouette, and Calinski and Harabasz score and the highest Davies-Bouldin score as we already deduced by the visual representations of the clusters.
 
