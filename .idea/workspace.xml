@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5ee1c57-d24a-49e6-b572-3e2c32443727" name="Changes" comment="fra">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,13 +135,6 @@
       <workItem from="1668599233696" duration="185000" />
       <workItem from="1668599421239" duration="524000" />
       <workItem from="1671119143307" duration="33527000" />
-    </task>
-    <task id="LOCAL-00008" summary="martina">
-      <created>1671537539697</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1671537539697</updated>
     </task>
     <task id="LOCAL-00009" summary="martina">
       <created>1671548641019</created>
@@ -479,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673289499696</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fra">
+      <created>1673289825817</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1673289825817</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
