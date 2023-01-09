@@ -97,9 +97,13 @@ At this point having all the data we needed, we started implementing the cluster
 
 The first method we implemented was the Kmeans algorithm, for which we needed to compute the elbow method in order to find the right cluster number. As result, we found two numbers, 4 and 5.
 The best way to  decide which one to use was to compare their plots and their scores. Finally, we decided that the best one is the one with 4 clusters since the graph is clearer and the scores are optimized in a better way.
+
 ![elbowmethod.png](images%2Felbowmethod.png)
+
 For the Hierarchical Clustering we computed the number of cluster with the help of the dendrogram. After plotting it, we could see that also in this case the right choice for clusters was 4.
+
 ![dendogram.png](images%2Fdendogram.png)
+
 Finally, for the GMM and the Birch we put 4 clusters for the sake of consistency and to be able to compare it with the previous methods. 
 
 ## Results 
@@ -107,21 +111,29 @@ After implementing all the clustering methods, we carried out an overall analysi
 
 We visualized the clusters through 3D scatter plots, but we also computed empirical results about the characteristics of the clusters obtained.
 Comparing both we can describe the clusters:
-for example the clusters obtained in the birch model and kmeans model are very similar to each others (despite the order of their labels).
+for example the clusters obtained in the **birch model** and **kmeans model** are very similar to each others (despite the order of their labels).
+
+![kmeans3d.png](images%2Fkmeans3d.png)
+
+![BIrch.png](images%2FBIrch.png)
+
 - **The first cluster** represents inactive customers that have made a few purchases typically a long time ago.
 - **The second one** represents active customers that have made purchases many times, also recently, and have spent a fair amount on their purchases.
 - **The third cluster** represents new customers that have purchased very recently (they have in fact the lowest recency value) and have not spent much, because they haven’t made frequent transactions yet.
 - Finally, **the fourth cluster** represents usual/ loyal customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value). 
 
-The hierarchical clusters are pretty similar to the kmeans and birch clusters as well, the slight differences are that:
-in the hierarchical clusters the inactive customers have a lower recency and a lower frequency, 
-the active customers  have a lower monetary value and higher recency and 
+The **hierarchical** clusters are pretty similar to the kmeans and birch clusters as well, the slight differences are that:
+in the hierarchical clusters the inactive customers have a lower recency and a lower frequency,
+the active customers  have a lower monetary value and higher recency and
 the new customers have a higher recency and lower frequency.
 
-The Gaussian method instead returns different clusters,
-as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and loyal customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency 
+![hierarchical.png](images%2Fhierarchical.png)
+
+The **Gaussian method** instead returns different clusters,
+as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and loyal customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
 and low monetary value making them not useful for our ultimate goal.
 
+![Gmm.png](images%2FGmm.png)
 The inappropriateness of this method can be proven by the scores that quantify the performance of the algorithms.
 
 We decided to calculate 3 of these scores:
