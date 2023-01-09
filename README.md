@@ -2,7 +2,7 @@
 ### By Martina Serandrei, Giulia Macis, Francesco Capo
 
 ## Introduction
-The aim of our project is to analyze the data provided by a very big company about the customers of its Brazilian subsidiary, to be able to build an email campaign based on a customers' clustering.
+The aim of our project is to analyze the data provided by a very big company about the customers of its Brazilian subsidiary, to be able to build an email campaign based on a customer segmentation.
 The clustering is performed following the RFM analysis, where R stands for Recency, F for Rrequency and M for Monetary value.
 In order to accomplish our mission, we followed these steps:
 - Exploratory Data Analysis (EDA) with the visualization of data.
