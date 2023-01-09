@@ -95,7 +95,7 @@ To carry out the techniques we first computed all the metrics, and then we store
 Since the scales of the 3 variables are substantially different, we thought it would be necessary to standardize the results in order to work with uniform values.
 At this point having all the data we needed, we started implementing the clustering methods.
 
-The first method we implemented was the Kmeans algorithm, for which we needed to compute the elbow method in order to find the right cluster number. As result, we found two numbers, 4 and 5.
+The first method we implemented was the Kmeans algorithm, for which we needed to compute the elbow method in order to find the optimal number of clusters. As result, we found two numbers, 4 and 5.
 The best way to  decide which one to use was to compare their plots and their scores. Finally, we decided that the best one is the one with 4 clusters since the graph is clearer and the scores are optimized in a better way.
 
 ![elbowmethod.png](https://github.com/francescocapo/270341/blob/main/images/elbowmethod.png)
