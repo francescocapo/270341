@@ -117,7 +117,7 @@ Comparing both we can describe the clusters:
 - **The first cluster** represents inactive customers that have made a few purchases typically a long time ago.
 - **The second one** represents active customers that have made purchases many times, also recently, and have spent a fair amount on their purchases.
 - **The third cluster** represents new customers that have purchased very recently (they have in fact the lowest recency value) and have not spent much, because they haven’t made frequent transactions yet.
-- Finally, **the fourth cluster** represents usual/ loyal customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value). 
+- Finally, **the fourth cluster** represents regular- high spender customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value). 
 
 The **hierarchical** clusters are pretty similar to the kmeans, the slight differences are that:
 in the hierarchical clusters the inactive customers have a lower recency and a lower frequency,
@@ -136,7 +136,7 @@ The segmentation is clearly not functional according to our ultimate goal since 
 ![BIrch.png](https://github.com/francescocapo/270341/blob/main/images/BIrch.png)
 
 The **Gaussian method** instead returns different clusters,
-as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and loyal customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
+as a matter of fact cluster 4 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and regular-high spender customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
 and low monetary value making them not useful for our ultimate goal.
 
 ![Gmm.png](https://github.com/francescocapo/270341/blob/main/images/Gmm.png)
@@ -169,4 +169,4 @@ After the detailed analysis we concluded that the best model is the k means algo
 -inactive customers
 -active customers
 -new customers
--loyal customers
+-regular-high spender customers
