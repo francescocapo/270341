@@ -130,7 +130,7 @@ The **birch** clusters are not homogeneous.
 The first cluster contains customers with low recency, high frequency and medium monetary values.
 The second one contains only a few customers with medium recency, high frequency and high monetary value.
 The third one is really consistent and represents a large variety of customers, many with both low and high recency, a relatively low frequency and a low monetary value.
-The fourth cluster contains only one customer, which could be assigned to the second one.
+The fourth cluster contains only one customer, maybe it would have made more sense to assign it to the second one cluster.
 The segmentation is clearly not functional according to our ultimate goal since it doesn't picture the various customer groups.
 
 ![Birch](https://github.com/francescocapo/270341/blob/main/images/birch.png)
