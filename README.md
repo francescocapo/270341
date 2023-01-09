@@ -28,7 +28,7 @@ We chose these clustering techniques since each of this method provides a differ
     It is helpful when we represent a smaller population preference (customers), in respect of the overall population preference, (total customers).
 
 
-- Birch model (Balanced Iterative Reducing and Clustering using Hierarchies), is very useful because it helps to reduce the computational time by creating a tree structure and assigning each data point to the most relevant cluster. 
+- Birch model (Balanced Iterative Reducing and Clustering using Hierarchies), is very useful because it helps to reduce the computational time by creating a tree structure with the cluster centroids being read off the leaf.
   It is very convenient since in most cases it requires only one scan of the dataset, this improves our memory and time consumption, but still giving us a good interpretation.
 
 
@@ -104,7 +104,7 @@ For the Hierarchical Clustering we computed the number of cluster with the help 
 
 ![dendogram.png](https://github.com/francescocapo/270341/blob/main/images/dendrogram.png)
 
-Finally, for the GMM and the Birch we put 4 clusters for the sake of consistency and to be able to compare it with the previous methods. 
+Finally, in the GMM and the Birch, for the sake of consistency, we passed as hyperparameters 4 clusters to be able to compare it with the previous methods. 
 
 ## Results 
 After implementing all the clustering methods, we carried out an overall analysis of the outcomes obtained, and of the performance of the algorithms.
