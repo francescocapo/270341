@@ -98,11 +98,11 @@ At this point having all the data we needed, we started implementing the cluster
 The first method we implemented was the Kmeans algorithm, for which we needed to compute the elbow method in order to find the optimal number of clusters. As result, we found two numbers, 4 and 5.
 The best way to  decide which one to use was to compare their plots and their scores. Finally, we decided that the best one is the one with 4 clusters since the graph is clearer and the scores are optimized in a better way.
 
-![elbowmethod.png](https://github.com/francescocapo/270341/blob/main/images/elbowmethod.png)
+![elbowmethod](https://github.com/francescocapo/270341/blob/main/images/elbowmethod.png)
 
 For the Hierarchical Clustering we computed the number of cluster with the help of the dendrogram. After plotting it, we could see that also in this case the right choice for clusters was 4.
 
-![dendogram.png](https://github.com/francescocapo/270341/blob/main/images/dendrogram.png)
+![dendrogram](https://github.com/francescocapo/270341/blob/main/images/dendrogram.png)
 
 Finally, in the GMM and the Birch, for the sake of consistency, we passed as hyperparameters 4 clusters to be able to compare it with the previous methods. 
 
@@ -111,20 +111,20 @@ After implementing all the clustering methods, we carried out an overall analysi
 
 We visualized the clusters through 3D scatter plots, but we also computed empirical results about the characteristics of the clusters obtained.
 Comparing both we can describe the clusters:
-![kmeans3d.png](https://github.com/francescocapo/270341/blob/main/images/kmeans3d.png)
-
 
 - **The first cluster** represents inactive customers that have made a few purchases typically a long time ago.
 - **The second one** represents active customers that have made purchases many times, also recently, and have spent a fair amount on their purchases.
 - **The third cluster** represents new customers that have purchased very recently (they have in fact the lowest recency value) and have not spent much, because they haven’t made frequent transactions yet.
-- Finally, **the fourth cluster** represents regular- high spender customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value). 
+- Finally, **the fourth cluster** represents regular-high spender customers, they shop really frequently and spend a large amount of money on their orders (they have the highest monetary value).
 
-The **hierarchical** clusters are pretty similar to the kmeans, the slight differences are that:
+  ![kmeans3d.png](https://github.com/francescocapo/270341/blob/main/images/kmeans3d.png)
+
+  The **hierarchical** clusters are pretty similar to the kmeans, the slight differences are that:
 in the hierarchical clusters the inactive customers have a lower recency and a lower frequency,
 the active customers  have a lower monetary value and higher recency and
 the new customers have a higher recency and lower frequency.
 
-![hierarchical.png](https://github.com/francescocapo/270341/blob/main/images/hierarchical.png)
+![hierarchical](https://github.com/francescocapo/270341/blob/main/images/hierarchical.png)
 
 The **birch** clusters are not homogeneous.
 The first cluster contains customers with low recency, high frequency and medium monetary values.
@@ -133,13 +133,13 @@ The third one is really consistent and represents a large variety of customers, 
 The fourth cluster contains only one customer, which could be assigned to the second one.
 The segmentation is clearly not functional according to our ultimate goal since it doesn't picture the various customer groups.
 
-![Birch.png](https://github.com/francescocapo/270341/blob/main/images/birch.png)
+![Birch](https://github.com/francescocapo/270341/blob/main/images/birch.png)
 
 The **Gaussian method** instead returns different clusters,
 as a matter of fact cluster 3 corresponds to the union of the kmeans clusters number 4 and 2, meaning that there is no distinction between active customers and regular-high spender customers. Additionally, three really similar clusters are created, all three contain customers with a high recency, low frequency
 and low monetary value making them not useful for our ultimate goal.
 
-![Gmm.png](https://github.com/francescocapo/270341/blob/main/images/Gmm.png)
+![GMM](https://github.com/francescocapo/270341/blob/main/images/GMM.png)
 
 The inappropriateness of this method can be proven by the scores that quantify the performance of the algorithms.
 
@@ -159,13 +159,13 @@ We decided to calculate 3 of these scores:
 The minimum value is zero, so the lower the score the better the clusters.
       ![davis bouldin](https://github.com/francescocapo/270341/blob/main/images/davis%20bouldin.png)
 
-The results can be a little misleading, for example the birch algorithm has the highest Silhouette score and the lowest Davies-Bouldin score but it has a low Calinski and Harabasz score.
-Looking at the plot though we saw that the clusters aren’t homogeneous since the last one contains only one customer implying that this method isn’t the best choice.
-Over all, we deduce that the best algorithm is k means and the worst is gaussian mixture model, as we already deduced by the visual representations of the clusters.
+The results can be a little misleading, for example the birch algorithm has the highest Silhouette score and the lowest Davies-Bouldin score, but it has a low Calinski and Harabasz score.
+Looking at the plot though we saw that the clusters aren’t homogeneous, since the last one contains only one customer. This implies that this method isn’t the best choice for us.
+Over all, we deduce that the best algorithm is kmeans and the worst is gaussian mixture model, as we already deduced by the visual representations of the clusters.
 The reason why it isn’t a good method for our dataset is probably because we have a big dataset with well-defined data, and low noise, so the kmeans method works better even if it's simpler.
 Moreover, The GMM method is less sensitive to outliers.
 
-After the detailed analysis we concluded that the best model is the k means algorithm, therefore the segments obtained are the following four:
+After the detailed analysis we concluded that the best model is the kmeans algorithm, therefore the segments obtained are the following four:
 - inactive customers
 - active customers
 - new customers
