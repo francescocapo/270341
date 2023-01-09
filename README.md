@@ -64,7 +64,7 @@ Then we started analyzing the variables of the dataset by plotting the correlati
 In our case we saw that basically our numeric variables are the ones related to the payments or the orders; in particular, we can see that there is a high correlation between _payment_value_ and the _price_, while we have  a negative correlation, with _order_item_id_ and the _price_ since _order_item_id_ stands for the number of items for each order, and the _price_ means the price of each item. 
 It is easily understandable from the description that the number of items that we place in an order cannot influence in any way the price of an item. We can make the same reasoning for the relationship between _order_item_id_ and _freight_value_.
 
-![heatmap](images/heatmap.png)
+![heatmap](https://github.com/francescocapo/270341/blob/main/images/heatmap.png)
 
 Furthermore, we decided to plot some of the features which might be interesting to correlate. One of these could be the number of orders derived from each Brazilian federative state with a barplot; so, we counted (with `.size()`) how many order per state by applying the pandas `.groupby()` function.
 
@@ -94,6 +94,7 @@ Additionally, first-time customers, with a low frequency may be good targets for
 To carry out the techniques we first computed all the metrics, and then we stored them in a dataframe called *score_dataframe*.
 Since the scales of the 3 variables are substantially different, we thought it would be necessary to standardize the results in order to work with uniform values.
 At this point having all the data we needed, we started implementing the clustering methods.
+
 
 
 
